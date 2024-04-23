@@ -36,8 +36,9 @@ public class ConfiguracionFragment extends Fragment {
 
         binding = FragmentConfiguracionBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        rbIngles = binding.rbEng.isChecked();
-        rbEsp = binding.rbEsp.isChecked();
+        
+
+
         configuracionViewModel.getMTipoMapa().observe(getViewLifecycleOwner(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer tipoMapa) {

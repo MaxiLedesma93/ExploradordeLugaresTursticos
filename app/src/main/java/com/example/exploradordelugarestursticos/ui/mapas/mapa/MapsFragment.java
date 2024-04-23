@@ -59,6 +59,7 @@ public class MapsFragment extends Fragment {
                     googleMap.addMarker(new MarkerOptions().position(ubi).title(ConfiguracionFragment.IDIOMA));
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ubi, 15f));
                    googleMap.setMapType(ConfiguracionFragment.TIPO_MAP);
+
                 }
             });
 
