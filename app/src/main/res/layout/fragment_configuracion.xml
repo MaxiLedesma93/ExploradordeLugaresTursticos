@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.configuracion.ConfiguracionFragment">
+
+    <RadioGroup
+        android:id="@+id/rgMapa"
+        android:layout_width="194dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloTipo"
+        app:layout_constraintVertical_bias="0.058">
+
+        <RadioButton
+            android:id="@+id/rbSatelite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Satelite"
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbHibrido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hibrido"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvTituloTipo"
+        android:layout_width="178dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="80dp"
+        android:text="Tipo de Mapa"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIdioma"
+        android:layout_width="149dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="52dp"
+        android:text="Idioma"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgMapa" />
+
+    <RadioGroup
+        android:id="@+id/rgIdioma"
+        android:layout_width="230dp"
+        android:layout_height="91dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdioma">
+
+        <RadioButton
+            android:id="@+id/rbEsp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Español"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbEng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingles"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
