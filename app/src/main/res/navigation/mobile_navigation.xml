@@ -9,7 +9,12 @@
         android:id="@+id/nav_lugares"
         android:name="com.example.exploradordelugarestursticos.ui.lugares.LugaresFragment"
         android:label="@string/lugares_turisticos"
-        tools:layout="@layout/fragment_lugares" />
+        tools:layout="@layout/fragment_lugares" >
+
+        <action
+            android:id="@+id/action_nav_lugares_to_nuevoDetalle"
+            app:destination="@id/nuevoDetalle" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_mapas"
@@ -22,4 +27,19 @@
         android:name="com.example.exploradordelugarestursticos.ui.configuracion.ConfiguracionFragment"
         android:label="@string/Configuracion"
         tools:layout="@layout/fragment_configuracion" />
+    <fragment
+        android:id="@+id/salirFragment"
+        android:name="com.example.exploradordelugarestursticos.ui.salir.SalirFragment"
+        android:label="fragment_salir"
+        tools:layout="@layout/fragment_salir" />
+    <fragment
+        android:id="@+id/nuevoDetalle"
+        android:name="com.example.exploradordelugarestursticos.ui.lugares.NuevoDetalle"
+        android:label="Fotos y Horarios"
+        tools:layout="@layout/fragment_nuevo_detalle" >
+
+        <action
+            android:id="@+id/action_nuevoDetalle_to_nav_lugares"
+            app:destination="@id/nav_lugares" />
+    </fragment>
 </navigation>

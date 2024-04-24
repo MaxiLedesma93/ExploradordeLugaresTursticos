@@ -14,7 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.exploradordelugarestursticos.R;
 import com.example.exploradordelugarestursticos.databinding.FragmentConfiguracionBinding;
+import com.example.exploradordelugarestursticos.ui.mapas.mapa.MapsFragment;
 
 public class ConfiguracionFragment extends Fragment {
 
@@ -36,9 +38,6 @@ public class ConfiguracionFragment extends Fragment {
 
         binding = FragmentConfiguracionBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        
-
-
         configuracionViewModel.getMTipoMapa().observe(getViewLifecycleOwner(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer tipoMapa) {

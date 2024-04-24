@@ -1,7 +1,7 @@
 package com.example.exploradordelugarestursticos.ui.lugares;
 
 import android.app.Application;
-import android.content.Intent;
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -11,10 +11,9 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.exploradordelugarestursticos.entidades.LugarTuristico;
 
-public class DetalleLugarViewModel extends AndroidViewModel {
-
+public class NuevoDetalleViewModel extends AndroidViewModel {
     private MutableLiveData<LugarTuristico> turisticoMutableLiveData;
-    public DetalleLugarViewModel(@NonNull Application application) {
+    public NuevoDetalleViewModel(@NonNull Application application) {
         super(application);
     }
 
@@ -24,12 +23,10 @@ public class DetalleLugarViewModel extends AndroidViewModel {
         }
         return turisticoMutableLiveData;
     }
-    public void recuperarLugar(Intent intent){
-        LugarTuristico lugarTuristico = (LugarTuristico)intent.getSerializableExtra("lugar");
+    public void recuperarLugar(Bundle bundle){
+        LugarTuristico lugarTuristico = (LugarTuristico)bundle.get("lugar");
         if(lugarTuristico!=null){
             turisticoMutableLiveData.setValue(lugarTuristico);
-
         }
     }
-
 }

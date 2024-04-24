@@ -1,17 +1,22 @@
 package com.example.exploradordelugarestursticos.ui.lugares;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.exploradordelugarestursticos.R;
 import com.example.exploradordelugarestursticos.databinding.FragmentLugaresBinding;
 import com.example.exploradordelugarestursticos.entidades.LugarTuristico;
 
@@ -31,8 +36,8 @@ public class LugaresFragment extends Fragment {
         lugaresViewModel.getMutableLista().observe(getViewLifecycleOwner(), new Observer<List<LugarTuristico>>() {
             @Override
             public void onChanged(List<LugarTuristico> lugarTuristicos) {
-                LugarAdapter lugarAdapter = new LugarAdapter(lugarTuristicos,getContext());
-                GridLayoutManager gridLayout = new GridLayoutManager(getContext(),1, GridLayoutManager.VERTICAL, false);
+                LugarAdapter lugarAdapter = new LugarAdapter(lugarTuristicos, getContext());
+                GridLayoutManager gridLayout = new GridLayoutManager(getContext(), 1, GridLayoutManager.VERTICAL, false);
                 RecyclerView rc = binding.listaLugares;
                 rc.setLayoutManager(gridLayout);
                 rc.setAdapter(lugarAdapter);
