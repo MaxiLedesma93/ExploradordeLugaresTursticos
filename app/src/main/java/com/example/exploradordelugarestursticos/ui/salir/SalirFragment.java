@@ -19,20 +19,14 @@ public class SalirFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
     private FragmentSalirBinding binding;
-    public SalirFragment() {
-        // Required empty public constructor
-    }
-
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
       //  dialogo = new Dialogo();
-        binding = FragmentSalirBinding.inflate(getLayoutInflater(),container,false);
+        binding = FragmentSalirBinding.inflate(inflater,container,false);
+        View root = binding.getRoot();
 
 
         binding.btnSalir.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +36,12 @@ public class SalirFragment extends Fragment {
 
             }
         });
-        return binding.getRoot();
+        return root;
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding=null;
+    }
 }

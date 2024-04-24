@@ -28,7 +28,7 @@
         android:label="@string/Configuracion"
         tools:layout="@layout/fragment_configuracion" />
     <fragment
-        android:id="@+id/salirFragment"
+        android:id="@+id/salir_nav"
         android:name="com.example.exploradordelugarestursticos.ui.salir.SalirFragment"
         android:label="fragment_salir"
         tools:layout="@layout/fragment_salir" />
